@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./Assets/css/style.css">
+  <link rel="shortcut icon" href="./Assets/images/crown.png" type="image/x-icon">
+  <!--CSS do Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+  <title>KGA Games</title>
+</head>
+
+<body class="bg-body-tertiary">
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg" style="font-size: large;">
+    <div class="container-fluid">
+      <nav class="navbar">
+        <a class="navbar-brand" href="./jogos.html">
+          KGA Games
+          <img src="./Assets/images/crown.png" width="40" height="40" alt="ícone de coroa">
+        </a>
+      </nav>
+      <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="jogos.html">Jogos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./quem-somos.html">Quem somos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="onde-estamos.html">Onde estamos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./cadastre.html">Cadastre-se</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--Google Maps-->
+  <div class="px-4 pt-5 my-5 text-center">
+    <h1 class="display-4 fw-bold text-body-emphasis">Onde nós estamos</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Por enquanto estamos presentes apenas no bairro Liberdade. Nosso
+        alcance será expandido em breve.</p>
+    </div>
+    <div>
+      <div class="container px-5 google-maps">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.2118668351777!2d-46.63945022397643!3d-23.56083307880011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce591765d8b803%3A0xed2007d9fa20ef4b!2sFMU%20-%20CAA%20COMPLEXO%20LIBERDADE%20(TAGU%C3%81)!5e0!3m2!1spt-BR!2sbr!4v1713020711743!5m2!1spt-BR!2sbr"
+          width="75%" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5" id="map-buttom">
+      <a href="https://maps.app.goo.gl/vAxpEPbCyjvaKjBY6" target="_blank"><button type="button"
+          class="btn btn-primary btn-lg px-4 me-md-2" style="color: gold;background-color: black; font-weight: bold;">Ir
+          para o mapa</button></a>
+    </div>
+  </div>
+  
+  <!--JS do Bootstrap-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
