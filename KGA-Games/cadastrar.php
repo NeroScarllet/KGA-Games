@@ -4,10 +4,11 @@ include_once "conexao.php";
 try {
     //variáveis que vão receber os conteúdos do fomrulário html
 
-    $nome = $_POST['nome'];
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $telefone = $_POST['telefone'];
+    $nome = $_POST['cfNome'];
+    $username = $_POST['cfUsername'];
+    $email = $_POST['cfEmail'];
+    $telefone = $_POST['cfTelefone'];
+    $senha = $_POST['cfSenha'];
     /*isso serve somente para verificar se o conteúdo chegou corretamente.
     echo "<br>".$nome;
     echo "<br>".$username;
@@ -16,7 +17,10 @@ try {
 
     //variável $conectar vem do arquivo conexao.php
 
-    $sql = $conectar->prepare("INSERT INTO pdo.clientes (email, endereco, cidade, estado, cep) VALUES ('$email', '$endereco', '$cidade', '$estado', '$cep')");
+    //Tratando as informações recebidas do formulário
+    $nome = strtoupper($nome);
+
+    $sql = $conectar->prepare("INSERT INTO kgagames.clientes (nome, username, email, telefone, senha) VALUES ('$nome', '$username', '$email', '$telefone', '$senha')");
 
     $sql->execute();
     header("location: index.html");

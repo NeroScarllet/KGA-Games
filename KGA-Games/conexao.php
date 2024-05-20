@@ -1,17 +1,20 @@
 <?php
 /* criar o banco de dados 
- CREATE DATABASE IF NOT EXISTS pdo;
+ CREATE DATABASE IF NOT EXISTS kgagames;
 criar a tabela
- USE pdo; 
+
+ USE kgagames; 
  CREATE TABLE IF NOT EXISTS clientes (
     email VARCHAR(80) PRIMARY KEY, 
-    usarname VARCHAR(64),
-    nome VARCHAR(80),
-    telefone VARCHAR(15)
+    username VARCHAR(64) NOT NULL,
+    nome VARCHAR(80) NOT NULL,
+    telefone VARCHAR(15),
+    senha VARCHAR(128),
     endereco VARCHAR(80), 
     cidade VARCHAR(30), 
     estado VARCHAR(40), 
-    cep VARCHAR(09));
+    cep VARCHAR(09)
+    );
     */
 
 try {
@@ -22,6 +25,4 @@ try {
 } catch (PDOException $e) {
     echo("Falha ao se conectar".$e->getMessage());
 }
-
-
 ?>

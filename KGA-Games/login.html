@@ -13,7 +13,7 @@
     <title>KGA Games</title>
 </head>
 
-<body class="bg-body-tertiary bg" id="cadastro-bg">
+<body class="bg-body-tertiary bg" id="login-bg">
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg" style="font-size: large;">
         <div class="container-fluid">
@@ -56,13 +56,13 @@
                 <form class="p-4 p-md-5 border rounded-3 border-color" action="./logar.php" method="post">
                     <h1 class="mb-5 text-center">Login</h1>
                     <div class="form-floating mb-3">
-                        <input type="Email" class="form-control" id="inputEmail" maxlength="80" onblur="validaEmail()"
+                        <input type="lfEmail" class="form-control" id="inputEmail" maxlength="80" onblur="validaEmail()"
                           placeholder="Email"  required />
                         <label for="inputEmail">Email</label>
                     </div>
 
                     <div class="form-floating mb-3">
-                        <input type="password" class="form-control" id="inputSenha" placeholder="Senha" required/>
+                        <input name="lfSenha" type="password" class="form-control" id="inputSenha" placeholder="Senha" required/>
                         <label for="inputSenha">Senha</label>
                     </div>
 

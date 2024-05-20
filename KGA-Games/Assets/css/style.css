@@ -212,9 +212,8 @@ div {
     margin-top: 100px;
 }
 
+
+#cadastro-bg,
 #login-bg{
-    background-color: black;
-}
-#cadastro-bg{
     background-color: black;
 }

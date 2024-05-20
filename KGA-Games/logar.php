@@ -1,27 +1,27 @@
 <?php
 include_once "conexao.php";
 
-/*USE pdo;
+/*USE kgagames;
 CREATE TABLE IF NOT EXISTS usuarios (
     email VARCHAR(80) PRIMARY KEY,
     nome VARCHAR(80) NOT NULL,
     senha VARCHAR(6) NOT NULL); 
-USE pdo;
+USE kgagames;
 INSERT INTO usuarios (email, nome, senha) VALUES ('silvia@gmail.com', 'Silvia','123456'); 
 */
 
 try {
     //informações do usuário
-    $email = $_POST['email'];
-    $senha = $_POST['senha'];
+    $email = $_POST['lfEmail'];
+    $senha = $_POST['lfSenha'];
     //SELECT * FROM usuarios WHERE email='silvia@gmail.com' AND senha='123456';
-    $sql=$conectar->query("SELECT * FROM pdo.usuarios WHERE email='$email' AND senha='$senha'");
+    $sql=$conectar->query("SELECT * FROM kgagames.usuarios WHERE email='$email' AND senha='$senha'");
 
     if ($sql->rowCount()>0)    
     //rowCount() retorna o número de linhas encontradas
         {
           //Usuário encontrado->posso ver os clientes cadastrados
-          $consulta=$conectar->query("SELECT * FROM pdo.clientes");
+          $consulta=$conectar->query("SELECT * FROM kgagames.clientes");
           //montando a tabela para mostrar os registros já cadastrados dos clientes
           echo "<table border='1' style='border: 1px black solid;border-collapse: collapse;'>
                     <tr>
