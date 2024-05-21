@@ -9,11 +9,11 @@ try {
     $email = $_POST['cfEmail'];
     $telefone = $_POST['cfTelefone'];
     $senha = $_POST['cfSenha'];
-    /*isso serve somente para verificar se o conteúdo chegou corretamente.
+    //isso serve somente para verificar se o conteúdo chegou corretamente.
     echo "<br>".$nome;
     echo "<br>".$username;
     echo "<br>".$email;
-    echo "<br>".$telefone;*/
+    echo "<br>".$telefone;
 
     //variável $conectar vem do arquivo conexao.php
 
@@ -23,7 +23,7 @@ try {
     $sql = $conectar->prepare("INSERT INTO kgagames.clientes (nome, username, email, telefone, senha) VALUES ('$nome', '$username', '$email', '$telefone', '$senha')");
 
     $sql->execute();
-    header("location: index.html");
+    header("location: jogos.html");
 } catch (PDOException $e) {
     echo ("Erro: " . $e->getMessage());
 }
