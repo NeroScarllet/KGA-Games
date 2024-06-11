@@ -75,7 +75,7 @@
 					</div>
 					<div class="form-floating mb-3">
 						<input name="fnome" type="text" class="form-control" maxlength="80" placeholder="Nome"
-							onkeyup="this.value=this.value.replace(/[^a-zA-Z]/g, '')"
+							onkeyup="this.value=this.value.replace(/[^a-zA-Z ]/g, '')"
 							value="<?php echo ($campo['nome']); ?>" required />
 						<label>Nome</label>
 					</div>
